@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+      <section class="flex w-screen h-screen justify-center bg-slate-800">
+        <div class="container bg-slate-700">
+          <div class="mb-4 w-full grid justify-center gap-4">
+            <h1 class="text-center text-3xl font-bold my-5 text-white">Ini Pencarian</h1>
+            <input type="text" ref="search" placeholder="Cari Sesuatu" class="w-80 h-min p-3 border rounded-lg" />
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <div class="w-1/4 bg-slate-600 rounded-lg" v-for="i in 10">{{ i }}</div>
+          </div>
+          <div>
+            <span v-for="i in 10">{{i}}</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module">
+      const { createApp, ref } = Vue;
+      s;
+      createApp({
+        data() {
+          return {
+            message: "Hallo",
+            title: "",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
